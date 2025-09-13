@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Financial Theme - Light Mode */
+    --background: 248 250 252;
+    --foreground: 15 23 42;
+
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 30 64% 55%;
+    --primary-foreground: 255 255 255;
+    --primary-glow: 30 64% 65%;
+
+    --secondary: 226 100% 97%;
+    --secondary-foreground: 30 41% 25%;
+
+    --muted: 226 100% 97%;
+    --muted-foreground: 100 7% 23%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 255 255 255;
+    --accent-glow: 160 84% 49%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 255 255 255;
+
+    --border: 226 100% 94%;
+    --input: 226 100% 94%;
+    --ring: 30 64% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom Investment Theme Colors */
+    --finance-blue: 220 91% 18%;
+    --finance-blue-light: 220 91% 28%;
+    --success-green: 160 84% 39%;
+    --success-green-light: 160 84% 49%;
+    --warning-amber: 45 93% 58%;
+    --neutral-gray: 215 25% 27%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--finance-blue)), hsl(var(--primary)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success-green)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--finance-blue)) 0%, hsl(var(--primary)) 50%, hsl(var(--accent)) 100%);
+    
+    /* Shadows */
+    --shadow-financial: 0 10px 40px -10px hsl(var(--finance-blue) / 0.3);
+    --shadow-success: 0 8px 32px -8px hsl(var(--success-green) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Financial Theme - Dark Mode */
+    --background: 15 23 42;
+    --foreground: 248 250 252;
+
+    --card: 30 41% 10%;
+    --card-foreground: 248 250 252;
+
+    --popover: 30 41% 10%;
+    --popover-foreground: 248 250 252;
+
+    --primary: 30 64% 55%;
+    --primary-foreground: 15 23 42;
+    --primary-glow: 30 64% 65%;
+
+    --secondary: 30 41% 15%;
+    --secondary-foreground: 248 250 252;
+
+    --muted: 30 41% 15%;
+    --muted-foreground: 215 25% 70%;
+
+    --accent: 160 84% 49%;
+    --accent-foreground: 15 23 42;
+    --accent-glow: 160 84% 59%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 15 23 42;
+
+    --border: 30 41% 18%;
+    --input: 30 41% 18%;
+    --ring: 30 64% 55%;
+
+    /* Custom Investment Theme Colors - Dark Mode */
+    --finance-blue: 220 91% 25%;
+    --finance-blue-light: 220 91% 35%;
+    --success-green: 160 84% 49%;
+    --success-green-light: 160 84% 59%;
+    --warning-amber: 45 93% 68%;
+    --neutral-gray: 215 25% 70%;
+    
+    /* Gradients - Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--finance-blue)), hsl(var(--primary)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success-green)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--finance-blue)) 0%, hsl(var(--primary)) 50%, hsl(var(--accent)) 100%);
+    
+    /* Shadows - Dark Mode */
+    --shadow-financial: 0 10px 40px -10px hsl(var(--finance-blue) / 0.5);
+    --shadow-success: 0 8px 32px -8px hsl(var(--success-green) / 0.6);
+    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.6);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
